@@ -26,7 +26,7 @@ export const Default: Story = {
     args: {
         task:{
             id: '1',
-            title: 'Test Task1',
+            title: 'Test Task4',
             state: 'TASK_INBOX',
         },
     },
