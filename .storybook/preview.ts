@@ -1,5 +1,10 @@
 import type { Preview } from "@storybook/react";
 
+import { initialize, mswLoader } from "msw-storybook-addon";
+
+import '../src/index.css';
+
+initialize();
 const preview: Preview = {
   parameters: {
     controls: {
@@ -9,6 +14,7 @@ const preview: Preview = {
       },
     },
   },
+  loaders:[mswLoader],
 };
 
 export default preview;
