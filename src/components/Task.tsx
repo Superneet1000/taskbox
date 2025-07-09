@@ -1,4 +1,5 @@
 import type { TaskData } from '../types';
+
 type TaskProps = {
     task: TaskData;
     onArchiveTask: (id: string) => void;
