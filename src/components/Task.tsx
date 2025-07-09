@@ -1,4 +1,5 @@
-import type { TaskData} from '../types';
+import type { TaskData } from '../types';
+
 type TaskProps = {
     task: TaskData;
     onArchiveTask: (id: string) => void;
@@ -13,7 +14,7 @@ export default function Task({
     return(
         <div className={`list-item ${state}`}>
             <label
-             htmlFor={`title-${id}`} 
+             htmlFor={`archiveTask-${id}`} 
              aria-label={`archiveTask-${id}`}
              className="checkbox"
              >
@@ -34,6 +35,7 @@ export default function Task({
                 name="title"
                 id={`title-${id}`}
                 placeholder="Input title"
+                style={{backgroundColor: "red"}}
                 />
         </label>
         {state !== "TASK_ARCHIVED" && (
